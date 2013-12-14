@@ -1,0 +1,19 @@
+{
+  "name": "Exilio",
+  "version": "0.0.0",
+  "description": "Saindo do exilio - download de livros",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "epub"
+  ],
+  "author": "eltonhnjr",
+  "license": "Open",
+  "dependencies": {
+    "logfmt": "~0.17.0",
+    "cheerio": "~0.12.4",
+    "express": "~3.4.7"
+  }
+}
