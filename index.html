@@ -9,16 +9,29 @@
 
 		<body>
 
-			<input type="text" id="shalom"></input>
+			<div class="content">
 
-			<input type="button" onclick="imCurious(document.getElementById('shalom').value)"></input>
+				<div class="element">
+					<input type="text" id="shalom"></input>
+				</div>
 
-			<br/>
-			<div id="feedback" style="display: none;"></div>
+				<div class="element">
+					<button onclick="imCurious(document.getElementById('shalom').value)">SEARCH</button>
+				</div>
 
-			<textarea style="width: 90%; height: 500px;" id="htmlCodeTextArea"></textarea>
+				<div class="element">
+					<button>KINDLE</button>
+					<button>EPUB</button>
+					<button>PDF</button>
+				</div>
 
+				<div id="feedback" style="display: none;"></div>
 
+				<textarea id="htmlCodeTextArea"></textarea>
+
+			</div>
+
+			<link href="css/style.css" rel="stylesheet" type="text/css">
 			<script src="js/jquery.min.js"></script>
 			<script src="js/jquery.xdomainajax.js"></script>
 			<script src="js/main.js"></script>
