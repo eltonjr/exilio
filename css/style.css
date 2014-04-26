@@ -1,5 +1,5 @@
 body {
-    background-color: #a0a0a0;
+    background-image: url("http://fc05.deviantart.net/fs71/i/2014/094/3/0/morning_glory_by_matthias_haker-d7czdfg.jpg");
 }
 
 .content {
@@ -25,6 +25,12 @@ input[type="text"] {
     outline: none;
 
     background-color: #A5E0E0;
+}
+
+h1 {
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+    text-align: center;
+    color: #fff;
 }
 
 button {
@@ -53,6 +59,10 @@ button:hover, button:focus {
 
 .element :first-child {
     margin-left: 0;
+}
+
+.large {
+    width: 32rem;
 }
 
 textarea {
