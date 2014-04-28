@@ -24,12 +24,15 @@ input[type="text"] {
 
     border: 0;
     outline: none;
+    font-size: 1rem;
+    text-align: center;
+    color: #666;
 }
 
 h1 {
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
     text-align: center;
-    color: #fff;
+    color: #FFF;
 }
 
 button {
@@ -46,14 +49,14 @@ button {
     margin-left: 1rem;
 
     background: transparent;
-    border-color: #FFFFFF;
-    color: #fff;
+    border-color: #FFF;
+    color: #FFF;
     text-align: center;
     margin-top: 0;
 }
 
 button:hover {
-    background-color: #007295;
+    background-color: #666;
 }
 
 .element :first-child {

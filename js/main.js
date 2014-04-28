@@ -9,14 +9,17 @@ function imCurious(sometext){
 }
 
 function getHTML(url){
-		$.ajax({
-				url: url,
-				type: 'GET',
-				success: function(res) {
-						var headline = res.responseText;
-						feedback(headline);
-				}
-		});
+	$.ajax({
+		url: url
+		,type: 'GET'
+		,success: function(res) {
+				var headline = res.responseText;
+				feedback(headline);
+		}
+		,error: function(type, status, msg){
+			feedback("Something wrong with the request");
+		}
+	});
 }
 
 function exiled(sometext){
