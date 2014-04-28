@@ -63,9 +63,3 @@ button:hover {
 .large {
     width: 32rem;
 }
-
-textarea {
-    display: none;
-    width: 32rem;
-    height: 500px;
-}
