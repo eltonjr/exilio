@@ -23,6 +23,7 @@ function getHTML(url){
 			$('#epub_btn').click(function(){ window.location.replace(epublink) });
 			$('#pdf_btn').click(function(){ window.location.replace(pdflink) });
 
+			enableButtons();
 			enableSearch();
 		}
 		,error: function(type, status, msg){
@@ -53,8 +54,10 @@ function disableSearch(){
 	$('.loading').removeClass('hide');
 }
 
+function enableButtons(){
+	$('#download_area').removeClass('hide');
+}
+
 
 // URL de teste
 // http://livrosdoexilado.org/os-ultimos-dias-de-john-f-kennedy-bill-oreilly/
-// scp_button_red
-// scp_button_blue
