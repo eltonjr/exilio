@@ -44,8 +44,6 @@ function exiled(sometext){
 }
 
 function feedback(msg){
-	// area = document.getElementById('feedback');
-	// area.appendChild(document.createTextNode(msg));
 	$('#feedback').text(msg);
 }
 
@@ -62,7 +60,6 @@ function disableSearch(){
 function enableButtons(){
 	$('#download_area').removeClass('hide');
 }
-
 
 // URL de teste
 // http://livrosdoexilado.org/os-ultimos-dias-de-john-f-kennedy-bill-oreilly/
