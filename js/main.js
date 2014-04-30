@@ -14,21 +14,26 @@ function getHTML(url){
 		url: url
 		,type: 'GET'
 		,success: function(res) {
-			var headline = res.responseText;
-			var kindlelink = $(headline).find('.scp_button_red').closest('a').attr('href');
-			var epublink = $(headline).find('.scp_button_blue').closest('a').attr('href');
-			var pdflink = $(headline).find('.scp_button_yellow').closest('a').attr('href');
+			if(res.responseText){
+				var headline = res.responseText;
+				var kindlelink = $(headline).find('.scp_button_red').closest('a').attr('href');
+				var epublink = $(headline).find('.scp_button_blue').closest('a').attr('href');
+				var pdflink = $(headline).find('.scp_button_yellow').closest('a').attr('href');
 
-			$('#kindle_btn').click(function(){ window.location.replace(kindlelink) });
-			$('#epub_btn').click(function(){ window.location.replace(epublink) });
-			$('#pdf_btn').click(function(){ window.location.replace(pdflink) });
+				$('#kindle_btn').click(function(){ window.location.replace(kindlelink) });
+				$('#epub_btn').click(function(){ window.location.replace(epublink) });
+				$('#pdf_btn').click(function(){ window.location.replace(pdflink) });
 
-			enableButtons();
-			enableSearch();
+				enableButtons();
+				enableSearch();
+			}
+
+			else {
+				wrongUrl();
+			}
 		}
-		,error: function(type, status, msg){
-			feedback("Something went wrong with the request");
-
+		,error: wrongUrl = function(type, status, msg){
+			feedback("Não há nada nessa URL !");
 			enableSearch();
 		}
 	});
@@ -39,9 +44,9 @@ function exiled(sometext){
 }
 
 function feedback(msg){
-	area = document.getElementById('feedback');
-	area.style.display = 'block';
-	area.appendChild(document.createTextNode(msg));
+	// area = document.getElementById('feedback');
+	// area.appendChild(document.createTextNode(msg));
+	$('#feedback').text(msg);
 }
 
 function  enableSearch(){
