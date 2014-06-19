@@ -1,4 +1,6 @@
 function imCurious(sometext){
+	clearContentArea();
+
 	if(exiled(sometext)){
 		disableSearch();
 		getHTML(sometext.trim());
@@ -20,9 +22,20 @@ function getHTML(url){
 				var epublink = $(headline).find('.scp_button_blue').closest('a').attr('href');
 				var pdflink = $(headline).find('.scp_button_yellow').closest('a').attr('href');
 
-				$('#kindle_btn').click(function(){ window.location.replace(kindlelink) });
-				$('#epub_btn').click(function(){ window.location.replace(epublink) });
-				$('#pdf_btn').click(function(){ window.location.replace(pdflink) });
+				if(kindlelink)
+					$('#kindle_btn').click(function(){ window.open(kindlelink) });
+				else
+					$('#kindle_btn').addClass('hide');
+
+				if(epublink)
+					$('#epub_btn').click(function(){ window.open(epublink) });
+				else
+					$('#epub_btn').addClass('hide');
+
+				if(pdflink)
+					$('#pdf_btn').click(function(){ window.open(pdflink) });
+				else
+					$('#pdf_btn').addClass('hide');
 
 				enableButtons();
 				enableSearch();
@@ -47,6 +60,11 @@ function feedback(msg){
 	$('#feedback').text(msg);
 }
 
+function clearContentArea(){
+	disableButtons();
+	$('#feedback').text("");
+}
+
 function  enableSearch(){
 	$('#search').removeAttr('disabled');
 	$('.loading').addClass('hide');
@@ -59,6 +77,10 @@ function disableSearch(){
 
 function enableButtons(){
 	$('#download_area').removeClass('hide');
+}
+
+function disableButtons(){
+	$('#download_area').addClass('hide');
 }
 
 // URL de teste
