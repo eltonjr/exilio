@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+			<link href="css/style.css" rel="stylesheet" type="text/css">
+
+			<title>Saindo do Exilio</title>
+		</head>
+
+		<body>
+
+			<div class="content">
+
+				<h1>
+					Saindo do Exílio
+				</h1>
+
+				<div class="element">
+					<input type="text" id="shalom"></input>
+				</div>
+
+				<div class="element">
+					<button id="search" class="large" onclick="imCurious(document.getElementById('shalom').value)">
+						<img class="loading hide" src="http://www.mytreedb.com/uploads/mytreedb/loader/ajax_loader_gray_512.gif">
+					</button>
+				</div>
+
+				<div id="download_area" class="element hide">
+					<button id="kindle_btn">KINDLE</button>
+					<button id="epub_btn">EPUB</button>
+					<button id="pdf_btn">PDF</button>
+				</div>
+
+				<div id="feedback" class="feedback"></div>
+
+			</div>
+
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.xdomainajax.js"></script>
+			<script src="js/main.js"></script>
+		</body>
+</html>
