@@ -62,7 +62,3 @@ function disableSearch(){
 function enableButtons(){
 	$('#download_area').removeClass('hide');
 }
-
-
-// URL de teste
-// http://livrosdoexilado.org/os-ultimos-dias-de-john-f-kennedy-bill-oreilly/
